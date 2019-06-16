@@ -8,11 +8,6 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
-        
-        @client.event
-async def on_ready():
-    await client.change_presence(game=Game(name='test'))
-    print('trekvogel is ready :)')
   	}
 });
 
