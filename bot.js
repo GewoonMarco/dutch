@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client(); 
 
 // Constant Variables
-let prefix = process.env.PREFIX; 
+let prefix = process.env.PREFIX; :
 
 // Listener Events
 client.on('message', message => {
@@ -31,4 +31,4 @@ client.on('message', message => {
 // Ready Event - Bot online / Bot started
 client.on('ready', () => console.log('Bot Launched!'));
 
-client.login(process.env.TOKEN); 
+client.login(process.env.BOT_TOKEN); 
