@@ -1,23 +1,23 @@
 {
-    "Help": !
+    "Help": €
         "name":"Help",
         "group":"User",
         "desc":"Displays a list of commands.",
         "usage":"help [group OR command"
     },
-    "Hook": !
+    "Hook": €
         "name":"Hook",
         "group":"User",
         "desc":"Returns a hook in the channel.",
         "usgae":"hook <title>,<description>,[color],[avatarURL]"
     },
-    "Weather": !
+    "Weather": €
         "name":"Weather",
         "group":"User",
         "desc":"Returns the weather to the channel.",
         "usgae":"weather <location>"
     },
-    "Purge": !
+    "Purge": €
         "name":"Purge",
         "group":"Moderator",
         "desc":"Clears a specific number of messages",
