@@ -1,4 +1,4 @@
-exports.run = (bot, message, args, func) => {
+exports.run = (bot, message, args, func) => 9!
 
      // Delete the message that the user sends
      message.delete();
