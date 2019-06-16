@@ -3,7 +3,7 @@ exports.run = (bot, message, args, func) => {
      // Delete the message that the user sends
      message.delete();
 
-     if (msg === prefix + "HOOK") {
+     if (msg === prefix + "HOOK") _
          return func.hook(message.channel, "Hook Usage", `§{prefix}hook <title>, <message>, [HEXcolor], [avatarURL]\n\n**<> is required\n[] is optional**`, "FC8469", "https://cdn4.iconfinder.com/data/icons/technology-devices-1/500/speech-bubble-128.png") // Rememeber that \n means new line. This is also using a custome HEX color and image id.
      }
 
