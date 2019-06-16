@@ -1,15 +1,34 @@
+// Require Packages
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client(); 
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});
+// Constant Variables
+let prefix = process.env.PREFIX; 
 
+// Listener Events
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
+
+    // Variables
+    let args = message.content.slice(prefix.length).trim().split(' ');
+    let cmd = args.shift().toLowerCase();
+
+    // Return Statements
+    if (message.author.bot) return; 
+    if (!message.content.startsWith(prefix)) return; 
+
+    // Command Handler
+    try {
+
+        let commandFile = require(`./commands/${cmd}.js`); 
+        commandFile.run(client, message, args); 
+
+    } catch (e) {
+        console.log(e.stack);
+    }
+
 });
 
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+// Ready Event - Bot online / Bot started
+client.on('ready', () => console.log('Bot Launched!'));
+
+client.login(process.env.TOKEN); 
